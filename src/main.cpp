@@ -133,6 +133,12 @@ void setup() {
   Firebase.begin(&firebaseConfig, &firebaseAuth);
   Firebase.setReadTimeout(firebaseData, 1000 * 60);
   Firebase.setwriteSizeLimit(firebaseData, "tiny");
+  Firebase.setInt(firebaseData, "/PTIOT_DHT/LED_01", 0);
+  Firebase.setInt(firebaseData, "/PTIOT_DHT/LED_04", 0);
+  Firebase.setInt(firebaseData, "/PTIOT_DHT/LED_05", 0);
+  Firebase.setInt(firebaseData, "/PTIOT_DHT/LED_06", 0);
+
+
 }
 
 void loop() {
